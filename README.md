@@ -36,6 +36,10 @@ TheMealDB API: https://www.themealdb.com/api.php
 | `/meal/:id` | View recipe details |
 | `*` | Page not found |
 
+## Live Demo
+
+Live Website: https://ps2-recipe-finder-delta.vercel.app
+
 ## Screenshots
 
 ### Home Page
