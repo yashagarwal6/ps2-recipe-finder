@@ -1,20 +1,16 @@
+
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import MealCard from "../components/MealCard";
 
 function Meals() {
   const [searchParams, setSearchParams] = useSearchParams();
-
   const query = searchParams.get("search") || "";
 
   const [search, setSearch] = useState(query);
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    setSearch(query);
-  }, [query]);
 
   useEffect(() => {
     let cancelled = false;
@@ -37,7 +33,7 @@ function Meals() {
         if (!cancelled) {
           setMeals(data.meals || []);
         }
-      } catch (err) {
+      } catch {
         if (!cancelled) {
           setError("Could not load recipes. Please try again.");
           setMeals([]);
@@ -60,7 +56,6 @@ function Meals() {
     e.preventDefault();
 
     const dish = search.trim();
-
     setSearchParams(dish ? { search: dish } : {});
   }
 
@@ -117,4 +112,4 @@ function Meals() {
   );
 }
 
-export default Meals; 
+export default Meals;
