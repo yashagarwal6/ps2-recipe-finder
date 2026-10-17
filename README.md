@@ -55,5 +55,14 @@ Live Website: https://ps2-recipe-finder-delta.vercel.app
 4. Run `npm run dev`.
 5. Open the local URL shown in the terminal.
 
+## Project Structure
+
+- `src/components/` - Reusable components like Navbar and MealCard
+- `src/pages/` - Home, Meals, MealDetails and NotFound pages
+- `src/App.jsx` - Application routes and main layout
+- `src/index.css` - Global styles
+- `src/App.css` - Page and component styles
+- `screenshots/` - Project screenshots
+
 ## Author
 Yash Agarwal
